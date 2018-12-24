@@ -1,6 +1,7 @@
 package vendingMachine;
 
-public class Drink extends Product 
+
+public class Drink extends Product implements Comparable<Drink>
 {
 	// Define Variables
 	private String _drinkType;	// The type of beverage	
@@ -39,5 +40,18 @@ public class Drink extends Product
 	{
 		return _ounces;
 	}
+	
+	//Compare drinks alphebetically
+	@Override
+	public int compareTo(Drink o) 
+	{
+		return this.getDrinkType().compareTo(o.getDrinkType());
+	}
+	
+	public String toString()
+	{
+		return _drinkType;
+	}
+	
 	
 }

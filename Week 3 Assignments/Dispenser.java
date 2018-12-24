@@ -15,6 +15,8 @@ public class Dispenser
 	private int _gumCount;
 	private int _drinkCount;
 	ArrayList<Product> inventory = new ArrayList<Product>();
+	ArrayList<Drink> drinks = new ArrayList<Drink>();
+	ArrayList<Snack> snacks = new ArrayList<Snack>();
 
 	
 	//  Constructor - No Arguments
@@ -23,6 +25,7 @@ public class Dispenser
 		
 	}
 	
+	//Add/remove from inventory
 	public void addToList(Product product)
 	{
 		inventory.add(product);
@@ -31,6 +34,30 @@ public class Dispenser
 	public void removeFromList(Product product)
 	{
 		inventory.remove(product);
+	}
+	
+	
+	//Add/remove from drink list
+	public void addDrink(Drink o)
+	{
+		drinks.add(o);
+	}
+	
+	public void removeDrink(Drink o)
+	{
+		drinks.remove(o);
+	}
+	
+	
+	//Add/remove from snack list
+	public void addSnack(Snack o)
+	{
+		snacks.add(o);
+	}
+	
+	public void removeSnack(Snack o)
+	{
+		snacks.remove(o);
 	}
 	
 	//Get and Set productCatagory
@@ -75,6 +102,7 @@ public class Dispenser
 		paymentType = _paymentType; 
 	}
 	
+	//Set counts of each type of product in inventory
 	public void setCandyCount(ArrayList<Product> array)
 	{
 		for(int i = 0; i < array.size(); i++)
@@ -136,8 +164,4 @@ public class Dispenser
 		return _drinkCount;
 	}
 	
-	public String toString()
-	{
-		return "Drink: " + _drinkCount + "\nCandy: " + _candyCount + "\nChips: " + _chipCount + "\nGum: " + _gumCount;
-	}
 }

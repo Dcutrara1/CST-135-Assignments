@@ -29,5 +29,10 @@ public class Chips extends Snack
 		_chipsType = chipsType; 
 	}
 	
+	public String toString()
+	{
+		return _chipsType;
+	}
+	
 	// Methods
 }

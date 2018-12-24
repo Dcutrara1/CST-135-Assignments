@@ -30,5 +30,10 @@ public class Candy extends Snack
 		_candyType = candyType; 
 	}
 	
+	public String toString()
+	{
+		return _candyType;
+	}
+	
 	// Methods
 }

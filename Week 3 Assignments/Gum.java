@@ -29,5 +29,10 @@ public class Gum extends Snack
 		_gumType = gumType; 
 	}
 	
+	public String toString()
+	{
+		return "Gum";
+	}
+	
 	// Methods
 }

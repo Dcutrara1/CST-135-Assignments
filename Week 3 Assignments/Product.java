@@ -89,4 +89,9 @@ public abstract class Product
 	{
 		// Enter Method steps
 	}
+	
+	public String toString()
+	{
+		return _productName;
+	}
 }

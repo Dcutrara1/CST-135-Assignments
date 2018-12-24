@@ -1,6 +1,6 @@
 package vendingMachine;
 
-public abstract class Snack extends Product 
+public abstract class Snack extends Product implements Comparable<Snack>
 {
 	// Define Variables
 	private String _snackType;		// Type of snack
@@ -28,5 +28,12 @@ public abstract class Snack extends Product
 	public void setSnackType (String snackType)
 	{ 
 		_snackType = snackType; 
+	}
+	
+	
+	//Compare Snacks alphebetically
+	public int compareTo(Snack o)
+	{
+		return this.snackType().compareTo(o.snackType());
 	}
 }
